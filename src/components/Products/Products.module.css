@@ -1,0 +1,31 @@
+.container {
+  height: auto;
+}
+.containFilters {
+  width: 40vw;
+}
+.containBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.containInfo {
+  width: 60vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.containSearchBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.containCards {
+  right: 0px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}

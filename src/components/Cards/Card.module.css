@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+.imageProduct {
+  text-align: center;
+  object-fit: cover;
+  width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+}
+.nameProduct {
+  font-size: 19px;
+  min-height: 46px;
+}
+
+.priceProduct {
+  font-size: 16px;
+}
+.colorButton:hover {
+  cursor: default;
+}
+.containColors {
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+}
+.containSizes {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.size {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0px;
+}

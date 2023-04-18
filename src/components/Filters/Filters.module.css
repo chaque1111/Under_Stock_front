@@ -1,0 +1,121 @@
+.container {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.containTitleFilter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reloadIcon {
+  font-size: 25px;
+}
+.TitleFilter {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.nameFilter {
+  font-weight: 400;
+  font-size: 19px;
+}
+.containColors {
+  padding: 10px;
+  border: 1px solid rgba(108, 108, 108, 0.597);
+  display: block;
+  width: 100px;
+  height: 150px;
+  padding-right: 0px;
+  overflow-y: scroll;
+}
+.containButtonsColor {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.buttonColor {
+  height: 20px;
+  width: 20px;
+}
+.buttonColor:focus {
+  border-radius: 100%;
+}
+
+.containSizes {
+  padding: 10px;
+  border: 1px solid rgba(108, 108, 108, 0.597);
+  display: block;
+  width: 100px;
+  height: 150px;
+  padding-right: 0px;
+  overflow-y: scroll;
+}
+.containSizeButtons {
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonSize {
+  border-radius: 4px;
+  background: black;
+  color: white;
+
+  font-weight: 500;
+  border-style: none;
+}
+.buttonSize:focus {
+  border-radius: 4px;
+  background: rgb(211, 6, 6);
+  color: white;
+}
+.containOpts {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+.buttonRefresh {
+  background: #fff;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+}
+.filterButton {
+  background: #fff;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+}
+.buttonRefresh:hover {
+  background: #fff;
+  color: rgb(199, 20, 20);
+}
+.filterButton:hover {
+  background: #fff;
+  color: rgb(198, 15, 15);
+}
+@media screen and (max-width: 800px) {
+  .containColors {
+    padding: 10px;
+    width: 100px;
+    height: 150px;
+  }
+  .containSizes {
+    padding: 10px;
+    width: 100px;
+    height: 150px;
+  }
+}

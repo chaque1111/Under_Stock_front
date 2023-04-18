@@ -1,0 +1,132 @@
+.link {
+  color: white;
+  text-decoration: none;
+}
+.link:hover {
+  color: rgb(211, 6, 6);
+}
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  background: #212529;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  color: #fff;
+}
+.containSection1 {
+  margin-left: 20px;
+  margin-right: 20px;
+  min-height: 190px;
+  width: 100%;
+  padding: 20px;
+  border-left: 1px solid white;
+}
+.containSection {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  width: 100%;
+  padding: 20px;
+  border-left: 1px solid white;
+  min-height: 190px;
+}
+.containIconsRedes {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.titleSection {
+  font-weight: 500;
+  width: auto;
+  font-family: "Questrial", sans-serif;
+  font-size: 26px;
+}
+.sectionDescription {
+  font-weight: 400;
+  width: auto;
+  font-size: 18px;
+}
+.containCreditsCards {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.ImagePay {
+  height: 25px;
+}
+.titleSectionRedes {
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-weight: 500;
+  width: auto;
+  font-family: "Questrial", sans-serif;
+  font-size: 26px;
+}
+.icon {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1500px) {
+  .titleSection {
+    font-size: 23px;
+  }
+  .sectionDescription {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .containSection {
+    width: 45% !important;
+    padding: 20px;
+    border-left: 1px solid white;
+  }
+  .containSection1 {
+    width: 45% !important;
+    padding: 20px;
+    border-left: 1px solid white;
+  }
+  .titleSection {
+    font-size: 22px;
+  }
+  .sectionDescription {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .containSection {
+    width: 100% !important;
+    padding: 20px;
+    border-left: none;
+    border-top: 1px solid white;
+  }
+  .containSection1 {
+    width: 100% !important;
+    padding: 20px;
+    border-left: none;
+    border-top: none;
+  }
+  .titleSection {
+    font-size: 22px;
+  }
+  .sectionDescription {
+    font-size: 15px;
+  }
+  .titleSectionRedes {
+    border-bottom: 1px solid white;
+  }
+}

@@ -1,0 +1,66 @@
+.container {
+  height: 46px;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #212529;
+  color: #000;
+  z-index: 1000;
+}
+.icon {
+  font-size: 20px;
+  margin-right: 4px;
+}
+.iconBox {
+  font-size: 17px;
+  margin-right: 5px;
+}
+.iconHeart {
+  font-size: 20px;
+  margin-right: 4px;
+}
+.Link {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
+  margin: 0px;
+  height: 100%;
+  font-size: 17px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.Link:hover {
+  background-color: #282b2f;
+  cursor: pointer;
+}
+@media screen and (max-width: 950px) {
+  .container {
+    height: 46px;
+  }
+  .Link {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .icon {
+    font-size: 17px;
+    margin-right: 4px;
+  }
+  .iconBox {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  .iconHeart {
+    font-size: 20px;
+    margin-right: 4px;
+  }
+}

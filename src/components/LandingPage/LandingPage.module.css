@@ -1,0 +1,135 @@
+.containerMaster {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+.container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+}
+.containLinks {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+}
+.remeraImage {
+  object-fit: cover;
+  height: 500px;
+  width: 315px;
+  min-width: 315px;
+  transition-duration: 2s;
+}
+.buzoImage {
+  height: 500px;
+  min-width: 315px;
+  transition-duration: 2s;
+}
+.calzadoImage {
+  object-fit: cover;
+  height: 500px;
+  width: 315px;
+  min-width: 315px;
+  transition-duration: 2s;
+}
+
+.remeraImage:hover {
+  opacity: 90%;
+  object-fit: cover;
+  transition-duration: 1s;
+  box-shadow: rgba(255, 255, 255, 0.612) 1px 1px 20px;
+  cursor: pointer;
+}
+.buzoImage:hover {
+  height: 500px;
+  transition-duration: 1s;
+  box-shadow: rgba(255, 255, 255, 0.612) 1px 1px 20px;
+  cursor: pointer;
+}
+.calzadoImage:hover {
+  object-fit: cover;
+  transition-duration: 1s;
+  box-shadow: rgba(255, 255, 255, 0.612) 1px 1px 20px;
+  cursor: pointer;
+}
+
+.containUbication {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-bottom: 100px;
+  padding-top: 0px;
+}
+.titleMap {
+  font-weight: 100;
+  font-family: "Questrial", sans-serif;
+}
+.mapLink {
+  text-align: center;
+  font-weight: 100;
+  font-size: 19px;
+}
+.containUnderDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+.descriptionUnder {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 100;
+  font-family: "Questrial", sans-serif;
+  width: 55vw;
+}
+.link {
+  font-weight: 100;
+  font-family: "Questrial", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+.link:hover {
+  color: rgb(211, 6, 6);
+}
+.imgMap {
+  image-resolution: 1000px;
+  object-fit: none;
+  opacity: 60%;
+  height: 400px;
+}
+
+@media screen and (max-width: 950px) {
+  .titleMap {
+    font-size: 24px;
+  }
+  .mapLink {
+    text-align: center;
+    font-size: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .imgMap {
+    opacity: 60%;
+    height: auto;
+    width: 85vw;
+  }
+  .descriptionUnder {
+    width: 80vw;
+  }
+}

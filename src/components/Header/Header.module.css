@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  color: #fff;
+  background: #000;
+}
+.containLogo {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.containTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 39%;
+}
+.containTitleMobile {
+  color: #fff;
+  background: #000;
+  padding-right: 25px;
+  padding-left: 25px;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+.subTitle {
+  font-size: 13px;
+  font-weight: 400;
+}
+.containOpts {
+  width: 30%;
+  display: flex;
+  gap: 70px;
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+}
+.containDropdown {
+  visibility: hidden;
+  position: absolute;
+  width: 50%;
+  display: flex;
+  gap: 70px;
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+}
+.dropDownToggle {
+  align-items: center;
+  border-style: solid;
+  border-color: white;
+  width: 47px;
+  background: none;
+  margin-right: 20px;
+}
+.dropDownToggle::before {
+  border-color: white;
+  visibility: hidden;
+}
+.dropDownToggle::after {
+  border-color: white;
+  visibility: hidden;
+}
+
+.DropdownMenu {
+  background: black;
+}
+.DropdownItem {
+  color: white;
+  font-weight: 500;
+}
+.iconUser {
+  color: white;
+  font-size: 20px;
+}
+.containOpt {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-right: 20px;
+}
+.underLogo {
+  margin-left: 20px;
+  position: relative;
+  height: 120px;
+}
+.sigIn {
+  border-width: 2px;
+  font-weight: 700;
+  border-color: rgb(211, 6, 6);
+  background: rgb(211, 6, 6);
+}
+
+.sigIn:hover {
+  color: rgb(211, 6, 6);
+  background: white;
+}
+.containRedsLink {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 25px;
+}
+.icon:hover {
+  cursor: pointer;
+  color: rgb(211, 6, 6);
+}
+.iconEmail {
+  font-size: 30px;
+}
+.iconEmail:hover {
+  cursor: pointer;
+  color: rgb(211, 6, 6);
+}
+.link {
+  color: white;
+}
+.link:hover {
+  color: rgb(211, 6, 6);
+}
+@media screen and (max-width: 950px) {
+  .containLogo {
+    width: 50%;
+  }
+  .containOpts {
+    width: 50%;
+  }
+  .containTitle {
+    visibility: hidden;
+    position: absolute;
+  }
+  .containTitleMobile {
+    position: static;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sigIn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .containOpts {
+    visibility: hidden;
+    position: absolute;
+  }
+  .containDropdown {
+    visibility: visible;
+    position: static;
+  }
+  .title {
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .subTitle {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

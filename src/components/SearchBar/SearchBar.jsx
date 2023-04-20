@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom";
 import {searchAsyncProduct} from "../../redux/actions";
 import styles from "../SearchBar/SearchBar.module.css";
 
-export const SearchBar = () => {
+export const SearchBar = ({setCurrentPage}) => {
   const dispatch = useDispatch();
   const params = useParams();
 
@@ -15,6 +15,7 @@ export const SearchBar = () => {
       dispatch(
         searchAsyncProduct({name: inputValue, category: params.category})
       );
+      setCurrentPage(1);
     }
   };
   const handleKeyDown = (key) => {
@@ -22,6 +23,7 @@ export const SearchBar = () => {
 
     if (key.key == "Enter" && inputValue) {
       dispatch(handleSearch());
+      setCurrentPage(1);
     }
   };
   useEffect(() => {

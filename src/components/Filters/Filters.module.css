@@ -1,20 +1,29 @@
 .container {
-  width: 40vw;
+  border-radius: 4px;
+  padding: 10px;
+  width: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background: #212529;
+  color: #fff;
+  position: sticky;
+  top: 70px;
+
+  margin-bottom: 100px;
 }
 .containTitleFilter {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .reloadIcon {
   font-size: 25px;
 }
 .TitleFilter {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -23,11 +32,12 @@
   font-size: 19px;
 }
 .containColors {
+  background: #fff;
   padding: 10px;
   border: 1px solid rgba(108, 108, 108, 0.597);
   display: block;
   width: 100px;
-  height: 150px;
+  height: 120px;
   padding-right: 0px;
   overflow-y: scroll;
 }
@@ -40,19 +50,39 @@
   gap: 5px;
 }
 .buttonColor {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 }
-.buttonColor:focus {
-  border-radius: 100%;
+.containDeleteFilter {
+  width: 100px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.deleteFilter {
+  margin: 0px;
+  font-size: 29px;
+}
+.deleteFilter:hover {
+  cursor: pointer;
+}
+.colorDelete {
+  border-radius: 4px;
+  border: 2px solid white;
+  height: 24px;
+  width: 24px;
 }
 
 .containSizes {
+  background: #fff;
   padding: 10px;
   border: 1px solid rgba(108, 108, 108, 0.597);
   display: block;
   width: 100px;
-  height: 150px;
+  height: 120px;
   padding-right: 0px;
   overflow-y: scroll;
 }
@@ -68,15 +98,11 @@
   border-radius: 4px;
   background: black;
   color: white;
-
+  border: 1px solid white;
+  height: 26.5px;
   font-weight: 500;
-  border-style: none;
 }
-.buttonSize:focus {
-  border-radius: 4px;
-  background: rgb(211, 6, 6);
-  color: white;
-}
+
 .containOpts {
   margin-top: 10px;
   display: flex;
@@ -111,11 +137,11 @@
   .containColors {
     padding: 10px;
     width: 100px;
-    height: 150px;
+    height: 120px;
   }
   .containSizes {
     padding: 10px;
     width: 100px;
-    height: 150px;
+    height: 120px;
   }
 }

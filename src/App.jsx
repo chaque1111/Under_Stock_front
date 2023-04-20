@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 
 import "./App.css";
 import Products from "./components/Products/Products";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,11 @@ function App() {
           exact
           path={"/productos/:category"}
           element={<Products />}
+        ></Route>
+        <Route
+          exact
+          path='/productos/:category/:id'
+          element={<ProductDetail />}
         ></Route>
       </Routes>
     </BrowserRouter>

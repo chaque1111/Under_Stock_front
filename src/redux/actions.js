@@ -6,6 +6,7 @@ import {
   getAllColors,
   getAllProducts,
   getAllSizes,
+  getProductDetail,
   searchProduct,
 } from "./reducer";
 
@@ -22,6 +23,27 @@ export function getAsyncProduct(category) {
       dispatch(getAllProducts(res.data));
     } catch (error) {
       console.log(error);
+    }
+  };
+}
+export function getAsyncDetail(obj) {
+  return async (dispatch) => {
+    try {
+      if (obj.category === "producto") {
+        const detail = await axios.get("/productos/detail/" + obj.id);
+
+        return dispatch(getProductDetail(detail.data));
+      } else {
+        const detail = await axios.get(`/${obj.category}/detail/${obj.id}`);
+
+        return dispatch(getProductDetail(detail.data));
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error...",
+        text: `Id del producto no encontrado, vuelve al inicio!`,
+      });
     }
   };
 }

@@ -1,14 +1,14 @@
 .container {
   display: flex;
-  width: 300px;
+  width: 250px;
   flex-direction: column;
 }
 .imageProduct {
   text-align: center;
   object-fit: cover;
-  width: 300px;
-  max-height: 300px;
-  min-height: 300px;
+  width: 250px;
+  max-height: 250px;
+  min-height: 250px;
 }
 .nameProduct {
   font-size: 19px;
@@ -37,4 +37,23 @@
   font-size: 13px;
   font-weight: 500;
   margin: 0px;
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 230px;
+  }
+  .imageProduct {
+    width: 230px;
+    max-height: 230px;
+    min-height: 230px;
+  }
+  .nameProduct {
+    font-size: 17px;
+    min-height: 40px;
+  }
+
+  .priceProduct {
+    font-size: 16px;
+  }
 }

@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200&family=Roboto+Slab&family=Schibsted+Grotesk:wght@900&family=Ubuntu+Mono:ital,wght@1,700&display=swap");
+/* .containMaster {
+  height: 100vh;
+} */
+.container {
+  padding-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+}
+.containImages {
+  display: flex;
+  flex-direction: row;
+}
+.imgsSecondary {
+  object-fit: cover;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+}
+.imgsSecondary:hover {
+  cursor: pointer;
+}
+.containSecondImgs {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.imageProduct {
+  max-height: 620px;
+  max-width: 428px;
+  min-height: 620px;
+  min-width: 428px;
+  object-fit: cover;
+}
+.containProductDetail {
+  display: flex;
+  flex-direction: row;
+}
+.historyNav {
+  display: flex;
+  flex-direction: row;
+}
+.containDetail {
+  padding-left: 25px;
+  max-width: 500px;
+}
+ul {
+  font-family: "Poppins", sans-serif;
+  gap: 4px;
+  padding: 0px;
+}
+.nameProduct {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: #363a3e;
+  font-family: "Poppins", sans-serif;
+}
+.priceProduct {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+.containP {
+  margin-bottom: 30px;
+}
+.icon {
+  margin-right: 5px;
+}
+.productParrf {
+  margin-bottom: 3px;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+}
+b {
+  margin-left: 2px;
+}
+.nameSize {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+.containTalles {
+  display: flex;
+  gap: 5px;
+}
+.containColores {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+.size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212529;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  width: 37px;
+}
+
+.color {
+  height: 20px;
+  width: 30px;
+}
+.productDescription {
+  font-family: "Poppins", sans-serif;
+  margin-right: 10px;
+}
+.favoriteButton {
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1450px) {
+  .imageProduct {
+    max-height: 530px;
+    max-width: 328px;
+    min-height: 530px;
+    min-width: 328px;
+  }
+  .imgsSecondary {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nameProduct {
+    font-size: 25px;
+  }
+  .priceProduct {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .containSecondImgs {
+    margin-right: 14px;
+    gap: 10px;
+  }
+  ul {
+    font-size: 14px;
+  }
+  .imageProduct {
+    max-height: 510px;
+    max-width: 308px;
+    min-height: 510px;
+    min-width: 308px;
+  }
+  .containProductDetail {
+    flex-direction: column;
+  }
+  .containDetail {
+    margin: 30px 40px;
+
+    padding: 0px;
+    padding-bottom: 70px;
+  }
+  .imageProduct {
+    max-height: 530px;
+    max-width: 328px;
+    min-height: 530px;
+    min-width: 328px;
+    object-fit: cover;
+  }
+  .imgsSecondary {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nameProduct {
+    font-size: 27px;
+  }
+  .priceProduct {
+    font-size: 20px;
+  }
+  .productParrf {
+    margin-bottom: 3px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .containImages {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .container {
+    width: 100%;
+  }
+  .containImages {
+    width: 100vw;
+    justify-content: center;
+  }
+  .imageProduct {
+    max-height: 490px;
+    max-width: 280px;
+    min-height: 490px;
+    min-width: 280px;
+  }
+  .containProductDetail {
+    flex-direction: column;
+  }
+  .containDetail {
+    margin: 30px auto;
+    max-width: 450px;
+    padding: 0px;
+    padding-bottom: 70px;
+  }
+  .imageProduct {
+    max-height: 530px;
+    max-width: 328px;
+    min-height: 530px;
+    min-width: 328px;
+    object-fit: cover;
+  }
+  .imgsSecondary {
+    margin-right: 0px;
+    margin-left: 20px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .nameProduct {
+  }
+  .priceProduct {
+    font-size: 23px;
+  }
+}

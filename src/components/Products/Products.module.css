@@ -1,11 +1,11 @@
 .container {
   height: auto;
 }
-.containFilters {
-  width: 40vw;
-}
+
 .containBody {
-  width: 100%;
+  padding-top: 40px;
+  margin: 0px auto;
+  width: 70vw;
   display: flex;
   flex-direction: row;
 }
@@ -28,4 +28,36 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px;
+}
+.Link {
+  text-decoration: none;
+  color: #000;
+}
+@media screen and (max-width: 1500px) {
+  .containBody {
+    width: 90vw;
+    margin: 0px auto;
+  }
+  .containInfo {
+    width: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  .containBody {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .containInfo {
+    width: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .containCards {
+    width: 100%;
+    padding: 5px;
+  }
 }

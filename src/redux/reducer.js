@@ -2,6 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState = {
   products: [],
   productsCopy: [],
+  productDetail: {},
   colors: [],
   sizes: [],
 };
@@ -17,6 +18,12 @@ export const productSlice = createSlice({
     searchProduct: (state, action) => {
       state.products = action.payload;
       state.productsCopy = action.payload;
+    },
+    getProductDetail: (state, action) => {
+      state.productDetail = action.payload;
+    },
+    refreshProduct: (state, action) => {
+      state.productDetail = {};
     },
     getAllColors: (state, action) => {
       state.colors = action.payload;
@@ -35,6 +42,7 @@ export const productSlice = createSlice({
 });
 
 export const {
+  getProductDetail,
   deleteFilters,
   getAllColors,
   getAllSizes,

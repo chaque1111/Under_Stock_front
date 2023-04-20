@@ -13,7 +13,7 @@ import {FaFilter, FaWindowClose} from "react-icons/fa";
 import {BiRefresh} from "react-icons/bi";
 import Button from "react-bootstrap/Button";
 import Swal from "sweetalert2";
-const Filters = ({setCurrentPage}) => {
+const Filters = ({setCurrentPage, scroll}) => {
   const dispatch = useDispatch();
   const params = useParams();
   const colors = useSelector((state) => state.products.colors);
@@ -51,6 +51,7 @@ const Filters = ({setCurrentPage}) => {
         setColorButton("");
         setSizeButton("");
         setCurrentPage(1);
+        scroll();
       } else {
         dispatch(
           filterAsync({category: params.category, color: color, size: size})
@@ -60,6 +61,7 @@ const Filters = ({setCurrentPage}) => {
         setColorButton("");
         setSizeButton("");
         setCurrentPage(1);
+        scroll();
       }
     } else {
       Swal.fire({

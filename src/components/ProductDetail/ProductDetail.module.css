@@ -10,6 +10,12 @@
   height: auto;
   align-items: center;
 }
+.containSpiner {
+  display: flex;
+  align-items: center;
+
+  height: 70vh;
+}
 .containImages {
   display: flex;
   flex-direction: row;
@@ -208,7 +214,7 @@ b {
   .containDetail {
     margin: 30px auto;
     max-width: 450px;
-    padding: 0px;
+    padding: 25px;
     padding-bottom: 70px;
   }
   .imageProduct {

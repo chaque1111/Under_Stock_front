@@ -15,6 +15,10 @@ export const productSlice = createSlice({
       state.products = action.payload;
       state.productsCopy = action.payload;
     },
+    cleanProducts: (state, action) => {
+      state.products = [];
+      state.productsCopy = [];
+    },
     searchProduct: (state, action) => {
       state.products = action.payload;
       state.productsCopy = action.payload;
@@ -49,5 +53,6 @@ export const {
   searchProduct,
   filterProducts,
   getAllProducts,
+  cleanProducts,
 } = productSlice.actions;
 export default productSlice.reducer;

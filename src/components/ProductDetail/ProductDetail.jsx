@@ -8,6 +8,7 @@ import NavBar from "../NavBar/NavBar";
 import styles from "../ProductDetail/ProductDetail.module.css";
 import {FaTruck, FaRegMoneyBillAlt, FaHeart} from "react-icons/fa";
 import Button from "react-bootstrap/Button";
+import {Spinner} from "react-bootstrap";
 const ProductDetail = () => {
   const dispatch = useDispatch();
   const params = useParams();
@@ -33,7 +34,7 @@ const ProductDetail = () => {
       <Header></Header>
       <NavBar></NavBar>
       <div className={styles.container}>
-        {product && (
+        {Object.keys(product).length ? (
           <div className={styles.containProductDetail}>
             <div className={styles.containImages}>
               <div className={styles.containSecondImgs}>
@@ -46,7 +47,7 @@ const ProductDetail = () => {
                         id={e}
                         key={e}
                         src={e}
-                        alt='imagenes de ropa'
+                        alt={product.name}
                       />
                     );
                   })}
@@ -116,6 +117,12 @@ const ProductDetail = () => {
                 <FaHeart />
               </Button>{" "}
             </div>{" "}
+          </div>
+        ) : (
+          <div className={styles.containSpiner}>
+            <Spinner animation='border' role='status'>
+              <span className='visually-hidden'>Loading...</span>
+            </Spinner>
           </div>
         )}
       </div>

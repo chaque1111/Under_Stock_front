@@ -1,6 +1,7 @@
 .container {
   border-radius: 4px;
   padding: 10px;
+  min-width: 124px;
   width: auto;
   display: flex;
   align-items: center;
@@ -11,6 +12,9 @@
   top: 70px;
 
   margin-bottom: 100px;
+}
+.container2 {
+  min-width: 124px;
 }
 .containTitleFilter {
   display: flex;

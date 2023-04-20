@@ -81,114 +81,120 @@ const Filters = ({setCurrentPage}) => {
     };
   }, [dispatch]);
   return (
-    <div className={styles.container}>
+    <>
       {colors.length ? (
-        <div className={styles.containTitleFilter}>
-          <h1 className={styles.TitleFilter}>Filtrar por</h1>
-          <h2 className={styles.nameFilter}>Color</h2>{" "}
-          <div className={styles.containColors}>
-            {colors.length ? (
-              <div className={styles.containButtonsColor}>
-                {colors.map((e) => {
-                  return (
-                    <button
-                      id={e}
-                      onClick={(e) => handleSelectColor(e)}
-                      value={e}
-                      className={styles.buttonColor}
-                      key={e}
-                      style={{background: `${e}`}}
-                    ></button>
-                  );
-                })}
+        <div className={styles.container}>
+          {colors.length ? (
+            <div className={styles.containTitleFilter}>
+              <h1 className={styles.TitleFilter}>Filtrar por</h1>
+              <h2 className={styles.nameFilter}>Color</h2>{" "}
+              <div className={styles.containColors}>
+                {colors.length ? (
+                  <div className={styles.containButtonsColor}>
+                    {colors.map((e) => {
+                      return (
+                        <button
+                          id={e}
+                          onClick={(e) => handleSelectColor(e)}
+                          value={e}
+                          className={styles.buttonColor}
+                          key={e}
+                          style={{background: `${e}`}}
+                        ></button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
-            ) : (
-              ""
-            )}
-          </div>
-          {colorButton.length ? (
-            <div className={styles.containDeleteFilter}>
-              <button
-                className={styles.colorDelete}
-                style={{background: colorButton}}
-              ></button>
+              {colorButton.length ? (
+                <div className={styles.containDeleteFilter}>
+                  <button
+                    className={styles.colorDelete}
+                    style={{background: colorButton}}
+                  ></button>
 
-              <FaWindowClose
-                onClick={() => {
-                  setColorButton(""), setColor("");
-                }}
-                className={styles.deleteFilter}
-              />
+                  <FaWindowClose
+                    onClick={() => {
+                      setColorButton(""), setColor("");
+                    }}
+                    className={styles.deleteFilter}
+                  />
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          ) : (
+            ""
+          )}
+
+          {sizes.length ? (
+            <div className={styles.containTitleFilter}>
+              <h2 className={styles.nameFilter}>Talles</h2>{" "}
+              <div className={styles.containSizes}>
+                {sizes.length ? (
+                  <div className={styles.containSizeButtons}>
+                    {sizes.map((e) => {
+                      return (
+                        <button
+                          id={e}
+                          value={e}
+                          onClick={(e) => handleSelectSize(e)}
+                          key={e}
+                          className={styles.buttonSize}
+                        >
+                          {e}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>{" "}
+              {sizeButton.length ? (
+                <div className={styles.containDeleteFilter}>
+                  <button className={styles.buttonSize}>{sizeButton}</button>
+                  <FaWindowClose
+                    onClick={() => {
+                      setSizeButton(""), setSize("");
+                    }}
+                    className={styles.deleteFilter}
+                  />
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          ) : (
+            ""
+          )}
+          {colors.length ? (
+            <div className={styles.containOpts}>
+              <Button className={styles.buttonRefresh} variant='light'>
+                <BiRefresh
+                  onClick={() => handleRefresh()}
+                  className={styles.reloadIcon}
+                />
+              </Button>{" "}
+              <Button
+                onClick={() => handleFilter()}
+                className={styles.filterButton}
+                variant='light'
+              >
+                <FaFilter />
+              </Button>{" "}
             </div>
           ) : (
             ""
           )}
         </div>
       ) : (
-        ""
+        <div className={styles.container2}></div>
       )}
-
-      {sizes.length ? (
-        <div className={styles.containTitleFilter}>
-          <h2 className={styles.nameFilter}>Talles</h2>{" "}
-          <div className={styles.containSizes}>
-            {sizes.length ? (
-              <div className={styles.containSizeButtons}>
-                {sizes.map((e) => {
-                  return (
-                    <button
-                      id={e}
-                      value={e}
-                      onClick={(e) => handleSelectSize(e)}
-                      key={e}
-                      className={styles.buttonSize}
-                    >
-                      {e}
-                    </button>
-                  );
-                })}
-              </div>
-            ) : (
-              ""
-            )}
-          </div>{" "}
-          {sizeButton.length ? (
-            <div className={styles.containDeleteFilter}>
-              <button className={styles.buttonSize}>{sizeButton}</button>
-              <FaWindowClose
-                onClick={() => {
-                  setSizeButton(""), setSize("");
-                }}
-                className={styles.deleteFilter}
-              />
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
-      ) : (
-        ""
-      )}
-      {colors.length ? (
-        <div className={styles.containOpts}>
-          <Button className={styles.buttonRefresh} variant='light'>
-            <BiRefresh
-              onClick={() => handleRefresh()}
-              className={styles.reloadIcon}
-            />
-          </Button>{" "}
-          <Button
-            onClick={() => handleFilter()}
-            className={styles.filterButton}
-            variant='light'
-          >
-            <FaFilter />
-          </Button>{" "}
-        </div>
-      ) : (
-        ""
-      )}
-    </div>
+    </>
   );
 };
 

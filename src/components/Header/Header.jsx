@@ -67,7 +67,7 @@ const Header = () => {
                 src={user.picture}
                 alt='user Image'
               />
-              <h3 className={styles.profileH3}>{user.name}</h3>
+              <h3 className={styles.profileH3}>{user.given_name}</h3>
             </div>
           )}
         </div>

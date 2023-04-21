@@ -1,6 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-axios.defaults.baseURL = "http://localhost:8080/";
+axios.defaults.baseURL = "https://understock-db.onrender.com/";
 import {
   filterProducts,
   getAllColors,

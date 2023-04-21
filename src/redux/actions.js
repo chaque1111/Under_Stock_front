@@ -1,12 +1,13 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-axios.defaults.baseURL = "https://understock-db.onrender.com/";
+axios.defaults.baseURL = "http://localhost:8080/";
 import {
   filterProducts,
   getAllColors,
   getAllProducts,
   getAllSizes,
   getProductDetail,
+  logIn,
   searchProduct,
 } from "./reducer";
 
@@ -121,6 +122,36 @@ export function filterAsync(obj) {
           dispatch(filterProducts(res.data));
         }
       }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+export function asyncLogIn(user) {
+  return async (dispatch) => {
+    try {
+      const res = await axios.post("/usuarios/create", user);
+      if (res.status == 200) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Cuenta creada correctamente!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+      if (res.status == 201) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `Hola otra vez ${res.data.name}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+
+      dispatch(logIn(res.data));
     } catch (error) {
       console.log(error);
     }

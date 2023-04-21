@@ -31,6 +31,9 @@ export default function Products() {
     });
   };
   useEffect(() => {
+    if (!params) {
+      window.location.reload(true);
+    }
     scroll();
     if (!category.category) {
       dispatch(getAsyncProduct());

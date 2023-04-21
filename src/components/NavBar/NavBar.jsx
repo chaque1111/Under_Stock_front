@@ -13,7 +13,14 @@ const NavBar = () => {
         </h1>
       </Link>
       <Link style={{textDecoration: "none"}} to={"/productos"}>
-        <h1 className={styles.Link}>
+        <h1
+          onClick={() => {
+            if (window.location.pathname === "/productos") {
+              window.location.reload(true);
+            }
+          }}
+          className={styles.Link}
+        >
           <FaBox className={styles.iconBox} />
           PRODUCTOS
         </h1>{" "}

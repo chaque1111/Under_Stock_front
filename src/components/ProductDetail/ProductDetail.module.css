@@ -19,6 +19,7 @@
 .containImages {
   display: flex;
   flex-direction: row;
+  border-bottom: 0.5px solid #33363845;
 }
 .imgsSecondary {
   object-fit: cover;
@@ -212,7 +213,7 @@ b {
     flex-direction: column;
   }
   .containDetail {
-    margin: 30px auto;
+    margin: 0px auto;
     max-width: 450px;
     padding: 25px;
     padding-bottom: 70px;

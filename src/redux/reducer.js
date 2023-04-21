@@ -5,6 +5,7 @@ const initialState = {
   productDetail: {},
   colors: [],
   sizes: [],
+  user: {},
 };
 
 export const productSlice = createSlice({
@@ -42,10 +43,14 @@ export const productSlice = createSlice({
       state.colors = [];
       state.sizes = [];
     },
+    logIn: (state, action) => {
+      state.user = action.payload;
+    },
   },
 });
 
 export const {
+  logIn,
   getProductDetail,
   deleteFilters,
   getAllColors,

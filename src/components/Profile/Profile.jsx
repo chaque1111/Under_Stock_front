@@ -7,8 +7,7 @@ import {cleanUser} from "../../redux/reducer";
 import {asyncDeleteAccount} from "../../redux/actions";
 import Swal from "sweetalert2";
 import {ImArrowLeft} from "react-icons/im";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+
 const Profile = () => {
   const {logout} = useAuth0();
   const dispatch = useDispatch();
@@ -45,7 +44,6 @@ const Profile = () => {
 
   return (
     <div>
-      <Header></Header>
       {user.name ? (
         <div className={styles.container}>
           <button
@@ -99,7 +97,6 @@ const Profile = () => {
       ) : (
         <div className={styles.container}></div>
       )}
-      <Footer></Footer>
     </div>
   );
 };

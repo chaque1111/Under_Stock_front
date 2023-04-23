@@ -8,6 +8,7 @@ import {useAuth0} from "@auth0/auth0-react";
 
 import {useDispatch, useSelector} from "react-redux";
 import {asyncLogIn} from "../../redux/actions";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -61,14 +62,20 @@ const Header = () => {
               </Button>{" "}
             </div>
           ) : (
-            <div className={styles.containButtonProfile}>
-              <img
-                className={styles.userPicture}
-                src={user.picture}
-                alt='user Image'
-              />
-              <h3 className={styles.profileH3}>{user.given_name}</h3>
-            </div>
+            <Link className={styles.Link} to={"/perfil"}>
+              <div className={styles.containButtonProfile}>
+                <img
+                  className={styles.userPicture}
+                  src={userRedux.image}
+                  alt='user Image'
+                />
+                {Object.keys(userRedux).length ? (
+                  <h3 className={styles.profileH3}>Perfil</h3>
+                ) : (
+                  ""
+                )}
+              </div>
+            </Link>
           )}
         </div>
       </div>{" "}

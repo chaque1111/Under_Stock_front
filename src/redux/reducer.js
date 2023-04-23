@@ -46,10 +46,14 @@ export const productSlice = createSlice({
     logIn: (state, action) => {
       state.user = action.payload;
     },
+    cleanUser: (state) => {
+      state.user = {};
+    },
   },
 });
 
 export const {
+  cleanUser,
   logIn,
   getProductDetail,
   deleteFilters,

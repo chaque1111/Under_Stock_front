@@ -1,6 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-axios.defaults.baseURL = "https://understock-db.onrender.com/";
+axios.defaults.baseURL = "http://localhost:8080";
 import {
   filterProducts,
   getAllColors,
@@ -152,6 +152,23 @@ export function asyncLogIn(user) {
       }
 
       dispatch(logIn(res.data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+export function asyncDeleteAccount(email) {
+  return async (dispatch) => {
+    try {
+      const res = await axios.delete("/usuarios/delete/" + email);
+      await Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: `${res.data}`,
+        showConfirmButton: true,
+        timer: 5000,
+      });
     } catch (error) {
       console.log(error);
     }

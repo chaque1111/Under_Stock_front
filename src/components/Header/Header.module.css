@@ -45,7 +45,7 @@
   width: 30%;
   display: flex;
   gap: 70px;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: center;
 }
@@ -57,13 +57,24 @@
 }
 .userPicture {
   height: 50px;
+  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
   border-radius: 100%;
   border: 2px solid #fff;
 }
 .profileH3 {
+  font-weight: 500;
   margin-top: 2px;
-  font-size: 12px;
-  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.Link {
+  text-decoration: none;
+  color: white;
+}
+.Link:hover {
+  text-decoration: none;
+  color: white;
 }
 /* .containDropdown {
   visibility: hidden;

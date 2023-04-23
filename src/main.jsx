@@ -6,7 +6,7 @@ import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import {store} from "./redux/store";
-
+import {ProSidebarProvider} from "react-pro-sidebar";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Auth0Provider
     domain='dev-jh65veyupniu4vjx.us.auth0.com'
@@ -17,7 +17,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   >
     <Provider store={store}>
       <React.StrictMode>
-        <App />
+        <ProSidebarProvider>
+          <App />
+        </ProSidebarProvider>
       </React.StrictMode>
     </Provider>
   </Auth0Provider>

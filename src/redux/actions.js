@@ -1,6 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-axios.defaults.baseURL = "https://understock-db.onrender.com/";
+axios.defaults.baseURL = "https://understock-db.onrender.com";
 import {
   filterProducts,
   getAllColors,
@@ -157,6 +157,16 @@ export function asyncLogIn(user) {
     }
   };
 }
+export function asyncValidate(obj) {
+  return async (dispatch) => {
+    try {
+      const res = await axios.get(`/${obj.category}/validate/${obj.name}`);
+      return res.data;
+    } catch (error) {
+      console.localhost(error);
+    }
+  };
+}
 
 export function asyncDeleteAccount(email) {
   return async (dispatch) => {
@@ -169,6 +179,28 @@ export function asyncDeleteAccount(email) {
         showConfirmButton: true,
         timer: 5000,
       });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+export function getAllColorsByCreate() {
+  return async (dispatch) => {
+    try {
+      const res = await axios.get("/productos/colors");
+      dispatch(getAllColors(res.data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+export function createProduct(product) {
+  return async (dispatch) => {
+    try {
+      const res = await axios.post(`/${product.category}/create`, product);
+      console.log(res.data);
     } catch (error) {
       console.log(error);
     }

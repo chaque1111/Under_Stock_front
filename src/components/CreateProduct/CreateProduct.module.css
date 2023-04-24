@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200&family=Roboto+Slab&family=Schibsted+Grotesk:wght@900&family=Ubuntu+Mono:ital,wght@1,700&display=swap");
+.container {
+  min-height: 100vh;
+  height: auto;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+.Form {
+  border-radius: 4px;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  width: 80vw;
+  color: black;
+}
+
+.containButtonImages {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.buttonImage {
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+.buttonImage:hover {
+  cursor: pointer;
+}
+.imagenPrev {
+  margin-left: 50px;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.containColorsDb {
+  display: flex;
+  flex-direction: column;
+}
+
+.containColorsButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.Label {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}

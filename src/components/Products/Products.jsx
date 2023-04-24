@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {Link, useParams} from "react-router-dom";
+import {Link, redirect, useParams} from "react-router-dom";
 import {getAsyncProduct} from "../../redux/actions";
 import Card from "../Cards/Card";
 import Filters from "../Filters/Filters";
@@ -91,7 +91,9 @@ export default function Products() {
                     text: `Aún no hay productos en ésta sección, ve a otra!`,
                     showConfirmButton: true,
                   }).then((response) => {
-                    window.location.href = "/";
+                    if (response.isConfirmed) {
+                      window.location.href = "/";
+                    }
                   })}
             </div>
             {Array.isArray(productSlice) && productSlice.length ? (

@@ -48,7 +48,7 @@
 .sectionDescription {
   font-weight: 400;
   width: auto;
-  font-size: 18px;
+  font-size: 15px;
 }
 .containCreditsCards {
   display: flex;
@@ -76,7 +76,7 @@
     font-size: 23px;
   }
   .sectionDescription {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 

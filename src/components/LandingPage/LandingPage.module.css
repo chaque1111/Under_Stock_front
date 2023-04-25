@@ -18,6 +18,8 @@
 .containLinks {
   padding-top: 100px;
   padding-bottom: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
   width: auto;
   display: flex;
   flex-wrap: wrap;
@@ -114,7 +116,77 @@
   height: 400px;
 }
 
+@media screen and (max-width: 1400px) {
+  .remeraImage {
+    object-fit: cover;
+    height: 400px;
+    width: 215px;
+    min-width: 215px;
+    transition-duration: 2s;
+  }
+  .buzoImage {
+    height: 400px;
+    min-width: 215px;
+    transition-duration: 2s;
+  }
+  .calzadoImage {
+    object-fit: cover;
+    height: 400px;
+    width: 215px;
+    min-width: 215px;
+    transition-duration: 2s;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .remeraImage {
+    object-fit: cover;
+    height: 375px;
+    width: 200px;
+    min-width: 200px;
+    transition-duration: 2s;
+  }
+  .buzoImage {
+    object-fit: cover;
+    height: 375px;
+    width: 200px;
+    min-width: 200px;
+    transition-duration: 2s;
+  }
+  .calzadoImage {
+    object-fit: cover;
+    height: 375px;
+    width: 200px;
+    min-width: 200px;
+    transition-duration: 2s;
+  }
+}
 @media screen and (max-width: 950px) {
+  .containLinks {
+    gap: 5vw;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .remeraImage {
+    object-fit: cover;
+    height: 385px;
+    width: 200px;
+    min-width: 200px;
+    transition-duration: 2s;
+  }
+  .buzoImage {
+    height: 385px;
+    width: 200px;
+    min-width: 200px;
+    transition-duration: 2s;
+  }
+  .calzadoImage {
+    object-fit: cover;
+    height: 385px;
+    width: 200px;
+    min-width: 200px;
+    transition-duration: 2s;
+  }
+
   .titleMap {
     font-size: 24px;
   }

@@ -57,8 +57,14 @@
     width: 90vw;
     margin: 0px auto;
   }
+}
+@media screen and (max-width: 1400px) {
+  .containBody {
+    width: 90vw;
+    margin: 0px auto;
+  }
   .containInfo {
-    width: auto;
+    width: 90vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,6 +78,7 @@
   }
   .containInfo {
     width: auto;
+    min-width: 50vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

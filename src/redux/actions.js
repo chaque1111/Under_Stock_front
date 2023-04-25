@@ -200,7 +200,7 @@ export function createProduct(product) {
   return async (dispatch) => {
     try {
       const res = await axios.post(`/${product.category}/create`, product);
-      console.log(res.data);
+      return res.data;
     } catch (error) {
       console.log(error);
     }

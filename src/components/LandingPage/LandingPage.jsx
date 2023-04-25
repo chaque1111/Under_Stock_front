@@ -9,12 +9,14 @@ import Header from "../Header/Header";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import {Link} from "react-router-dom";
+import Carousel from "../Carousel/Carousel";
 
 const LandingPage = () => {
   return (
     <div className={styles.containerMaster}>
       <Header></Header>
       <NavBar></NavBar>
+      <Carousel></Carousel>
       <div className={styles.container}>
         {" "}
         <div className={styles.containLinks}>

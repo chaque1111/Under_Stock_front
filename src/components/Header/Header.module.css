@@ -32,12 +32,12 @@
   align-items: center;
 }
 .title {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
   text-align: center;
 }
 .subTitle {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
 }
 .containOpts {
@@ -199,7 +199,7 @@
     align-items: center;
   }
   .sigIn {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -208,13 +208,12 @@
 
   .title {
     margin-bottom: 0px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 17px;
+
     text-align: center;
   }
   .subTitle {
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 15px;
   }
   .sigIn {
     font-size: 13px;

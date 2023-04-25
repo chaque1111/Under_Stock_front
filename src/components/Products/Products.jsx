@@ -94,6 +94,7 @@ export default function Products() {
                     if (response.isConfirmed) {
                       window.location.href = "/";
                     }
+                    window.location.href = "/";
                   })}
             </div>
             {Array.isArray(productSlice) && productSlice.length ? (

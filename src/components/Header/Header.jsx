@@ -41,7 +41,9 @@ const Header = () => {
           <h1 className={styles.title}>
             LAS MARCAS QUE MÁS TE GUSTAN A PRECIOS INCREÍBLES EN UNDER STOCK
           </h1>
-          <h1 className={styles.subTitle}>Prendas de otoño/invierno/verano</h1>
+          <h1 className={styles.subTitle}>
+            🔥Prendas de otoño/invierno/verano🔥
+          </h1>
         </div>
         <div className={styles.containOpts}>
           {!isAuthenticated ? (
@@ -83,7 +85,9 @@ const Header = () => {
         <h1 className={styles.title}>
           LAS MARCAS QUE MÁS TE GUSTAN A PRECIOS INCREÍBLES EN UNDER STOCK
         </h1>
-        <h1 className={styles.subTitle}>Prendas de otoño/invierno/verano</h1>
+        <h1 className={styles.subTitle}>
+          🔥Prendas de otoño/invierno/verano🔥
+        </h1>
       </div>
     </div>
   );

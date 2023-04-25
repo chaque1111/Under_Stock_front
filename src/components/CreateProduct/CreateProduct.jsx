@@ -14,8 +14,10 @@ import {
   FormText,
 } from "reactstrap";
 import {useDispatch, useSelector} from "react-redux";
+import Swal from "sweetalert2";
 
 const CreateProduct = () => {
+  const user = useSelector((state) => state.products.user);
   const dispatch = useDispatch();
   const colorsByDb = useSelector((state) => state.products.colors);
   const [images, setImages] = useState([]);
@@ -145,11 +147,23 @@ const CreateProduct = () => {
       size: sizes,
     });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(e);
-    dispatch(createProduct(form));
+    const res = await dispatch(createProduct(form));
+    if (res === "El producto se ha creado con éxito") {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: `${res}`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
   useEffect(() => {
+    if (!user.admin) {
+      history.back();
+    }
     dispatch(getAllColorsByCreate());
   }, []);
   return (
